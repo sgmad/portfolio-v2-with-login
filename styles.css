@@ -1,117 +1,115 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-
 body {
-    font-family: 'Inter', sans-serif;
-    background-color: #f3f4f6;
-    color: #1f2937;
-}
-
-.bento-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-@media (min-width: 768px) {
-    .bento-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (min-width: 992px) {
-    .bento-grid {
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: auto auto auto;
-    }
-    
-    .span-col-1 { grid-column: span 1; }
-    .span-col-2 { grid-column: span 2; }
-    .span-col-3 { grid-column: span 3; }
-    .span-col-4 { grid-column: span 4; }
-    
-    .row-span-2 { grid-row: span 2; }
-    .row-span-3 { grid-row: span 3; }
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
 }
 
 .bento-card {
-    background: white;
-    border-radius: 1.25rem;
-    padding: 1.5rem;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-    border: 1px solid rgba(0,0,0,0.03);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    display: flex;
-    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.profile-img-container {
+    width: 170px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 12px; 
+    border: 1px solid #dee2e6;
+    flex-shrink: 0;
+}
+
+.profile-img {
+    width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
-.bento-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
-}
-
-.card-header-bento {
+.section-title {
     font-weight: 700;
+    margin-bottom: 20px;
+    color: #1a1a1a;
     font-size: 1.1rem;
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: #111827;
 }
 
-.bento-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    padding: 0.5rem 0;
-    margin-top: 1rem;
-}
-
-.tech-tag {
-    font-size: 0.75rem;
-    font-weight: 600;
-    padding: 0.35rem 0.75rem;
-    background-color: #f8f9fa;
-    color: #4b5563;
-    border: 1px solid #e5e7eb;
-    border-radius: 0.5rem;
-    transition: all 0.2s;
-}
-
-.tech-tag:hover {
-    background-color: #eef2ff;
-    color: #4f46e5;
-    border-color: #c7d2fe;
-}
-
-.icon-box {
-    width: 40px;
-    height: 40px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-}
-
-.project-desc {
+.tech-badge {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    color: #333;
+    padding: 5px 12px;
+    border-radius: 6px;
     font-size: 0.85rem;
-    color: #6b7280;
-    line-height: 1.5;
-    margin-bottom: 1rem;
-    flex-grow: 1;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.tech-badge:hover {
+    background-color: #f8f9fa;
+    border-color: #0d2c54;
+    cursor: default;
+}
+
+.form-control, .form-select {
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    background-color: #fcfcfc;
 }
 
 .form-control:focus, .form-select:focus {
     box-shadow: none;
-    border: 1px solid #0d2c54;
-    background-color: white !important;
+    border-color: #0d2c54;
+    background-color: #fff;
 }
 
-.profile-img-wrapper img {
-    border: 4px solid white;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+.btn {
+    border-radius: 8px;
+}
+
+.btn-dark {
+    background-color: #1a1a1a;
+    border: none;
+}
+
+.btn-outline-secondary {
+    border-color: #dee2e6;
+    color: #555;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #f8f9fa;
+    color: #000;
+    border-color: #ccc;
+}
+
+.project-item {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background-color: #fcfcfc;
+}
+
+.project-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border-color: #0d2c54 !important;
+}
+
+.bio-text {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
 }
